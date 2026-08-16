@@ -1,0 +1,33 @@
+{
+  "name": "opencode-muster",
+  "version": "0.1.0",
+  "description": "opencode plugin: your model picker lists the LM Studio models loaded right now, not everything you've ever downloaded",
+  "type": "module",
+  "main": "muster.js",
+  "exports": {
+    ".": "./muster.js"
+  },
+  "files": [
+    "muster.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "lmstudio",
+    "lm-studio",
+    "llm",
+    "local-llm"
+  ],
+  "author": "dgnsrekt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgnsrekt/opencode-muster.git"
+  },
+  "homepage": "https://github.com/dgnsrekt/opencode-muster#readme",
+  "bugs": {
+    "url": "https://github.com/dgnsrekt/opencode-muster/issues"
+  }
+}
