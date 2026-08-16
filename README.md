@@ -21,16 +21,30 @@ list matches `lms ps`.
 
 ## Install
 
-No build step, no npm, no dependencies. Drop the file in your opencode plugin
-directory:
+Add it to the `plugin` array in `~/.config/opencode/opencode.json`:
 
-```sh
-curl -fsSL https://raw.githubusercontent.com/dgnsrekt/opencode-muster/main/muster.js \
-  -o ~/.config/opencode/plugin/muster.js
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["dgnsrekt/opencode-muster"]
+}
 ```
 
-Restart opencode. For a single project instead, use `.opencode/plugin/` in the
-project root.
+or let the CLI write that for you:
+
+```sh
+opencode plugin dgnsrekt/opencode-muster -g
+```
+
+Restart opencode. Pin to a tag or commit by appending a ref —
+`dgnsrekt/opencode-muster#v0.1.1` — which is worth doing when several machines
+should run the same version. Drop `-g` for the current project only.
+
+Prefer a file you can edit in place? Copy `muster.js` into
+`~/.config/opencode/plugin/` and skip the config entry entirely; plugins in that
+directory load on their own.
+
+No build step, no dependencies.
 
 Nothing else is required — no provider block, no config. If you already have a
 `provider.lmstudio` entry, Muster keeps your `baseURL`, `name`, `npm` and any other

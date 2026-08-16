@@ -1,6 +1,6 @@
 {
   "name": "opencode-muster",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "opencode plugin: your model picker lists the LM Studio models loaded right now, not everything you've ever downloaded",
   "type": "module",
   "main": "muster.js",
